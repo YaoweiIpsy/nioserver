@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="STDOUT">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <!--format the logging：%d: date    %thread: thread name     %-5level:left 5 character space  %msg: logging message    %n: new line-->
+      <Pattern>
+        %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger)
+        Line:%-3L : %cyan(%msg%n)
+      </Pattern>
+    </layout>
+  </appender>
+  <appender class="ch.qos.logback.core.FileAppender" name="FILE">
+    <append>true</append>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <charset>utf-8</charset>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger Line:%-3L - %msg%n</pattern>
+    </encoder>
+    <file>server.log</file>
+  </appender>
+  <root level="info">
+    <appender-ref ref="STDOUT"/>
+    <appender-ref ref="FILE"/>
+  </root>
+</configuration>

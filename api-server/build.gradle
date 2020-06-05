@@ -1,0 +1,23 @@
+plugins {
+  id 'application'
+}
+compileJava {
+  options.compilerArgs << '-parameters'
+}
+dependencies {
+  implementation(
+      "io.netty:netty-all:4.1.42.Final",
+      "io.reactivex.rxjava3:rxjava:3.0.4",
+      "org.apache.commons:commons-lang3:3.0",
+      "org.reflections:reflections:0.9.11",
+      "com.google.guava:guava:29.0-jre",
+      "com.fasterxml.jackson.core:jackson-core:2.9.8",
+      "com.fasterxml.jackson.core:jackson-databind:2.9.8",
+      "com.fasterxml.jackson.core:jackson-annotations:2.9.8",
+      "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8",
+      "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.9.8",
+      "com.amazonaws:aws-java-sdk-sts:1.11.150",
+      "com.amazonaws:aws-java-sdk-dynamodb:1.11.150"
+  )
+}
+mainClassName = 'com.ipsy.simpleNIOServer.application.Server'

@@ -1,0 +1,5 @@
+rootProject.name = 'SimpleNIOServer'
+
+include 'api-core'
+include 'api-client'
+include 'api-server'

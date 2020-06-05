@@ -1,0 +1,13 @@
+.gradle
+**/.idea
+**/build
+**/out
+
+**/*.iml
+
+# Terraform
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+.terraform/
+**/node_modules/**
